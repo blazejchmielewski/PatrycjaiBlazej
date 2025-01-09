@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --primary-color: ;
+    --text-color: #737373;
+    --background-color: #ADADAD;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    height: 100dvh;
+}
+
+/* --------------------------------------------------------------- */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#main-photo{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-family: "Alice", sans-serif;
+    background: url("/assets/3.jpg") no-repeat center center/cover;
+    overflow: hidden;
+
+    #getting-married-container{
+        margin-top: 100px;
+        letter-spacing: 2px;
+        font-size: 1rem;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+    #bride-groom-names-container{
+        font-size: 5rem;
+        line-height: 1.3em;
+        font-weight: 400;
+       
+    }
+    #weeding-date-container{
+        margin-top: 16px;
+        font-size: 1.5rem;
+        line-height: 1.3em;
+    }
+    #countdown-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        font-size: 2rem;
+        padding: 50px;
+    }
+    p{
+        box-sizing: border-box;
+    }
+    .countdown-card-container{
+        
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    #about-weeding-buttons-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .about-weeding-btn{
+        padding: 0.7em 1.5em;
+        border: 1px solid #fff;
+        border-radius: 100px;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color:inherit;
+        font-family: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        transition: 0.2s ease-in-out box-shadow;
+    }
+    .about-weeding-btn:hover{
+        box-shadow: 0px 0px 20px #fff;
+    }
+}
+#main-photo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#main-photo * {
+    position: relative;
+    z-index: 2;
+}
+/* --------------------------------------------------------------- */
+#be-with-us-container{
+    color: var(--text-color);
+    margin-top: 40px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    
+    #be-with-us-content{
+        position: relative;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 40px;
+        min-width: 200px;
+        max-width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0px 0px 40px -10px #00000070;
+        transition: 0.4s ease-in-out all;
+        
+        #be-with-us-flower{
+            height: 3rem;
+        }
+        h1{
+            font-size: 3rem;
+            font-family: "Alice";
+            font-weight: 400;
+            line-height: 1.3em;
+        }
+        p{
+            display: block;
+            padding: 10px;
+            line-height: 1.65em;
+            text-align: center;
+            font-family: "Montserrat", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            margin-bottom: 1.6em;
+        }
+        #be-with-us-signs{
+            font-family: "Alex Brush", serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 3rem;
+        }
+        
+    }
+
+    #be-with-us-content::after, 
+    #be-with-us-content::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: conic-gradient(from var(--angle), transparent 25%, #FFD700, transparent 50%, #FFD700);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        box-sizing: border-box;
+        border-radius: 10px;
+        animation: spin 8s linear infinite;
+    }
+
+    #be-with-us-content::before {
+        filter: blur(.5rem);
+        opacity: 1;
+    }
+
+    #be-with-us-photo-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #photo-container{
+            width: 400px;
+            height: 400px;
+            background-color:antiquewhite;
+            background: url(assets/5.jpg) no-repeat center center/cover;
+            border-radius: 50%;
+        }
+    }
+}
+/* --------------------------------------------------------------- */
+#where-and-when-container{
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+
+    .where-and-when-icon{
+        padding: 20px;
+    }
+
+    #where-and-when-descritpion{
+        width: 100%;
+        padding: 40px;
+        background-color: #FDFBFA;
+
+        h3{
+            margin-bottom: 15px;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.3em;
+        }
+        p{
+            color: var(--text-color);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+    }
+
+    #where-and-when-card-container{
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .where-and-when-card{
+            min-width: 300px;
+            padding: 20px;
+            border: 1px solid #FFD700;
+            box-shadow: 0px 0px 12px 0px #00000070;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    
+            h2{
+                font-family: "Alice";
+                font-size: 1.8rem;
+                line-height: 1.2em;
+                font-weight: 500;
+                color: #404040;
+                padding: 20px;
+            }
+            
+            .where-and-when-details{
+                color: var(--text-color);
+                line-height: 1.3em;
+                margin-bottom: 40px;
+                font-size: 0.9rem;
+            }
+        }
+        .where-and-when-map-container{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--background-color);
+        }
+    }
+}
+/* --------------------------------------------------------------- */
+#our-history-container{
+    width: 100%;
+    padding: 40px;
+    font-family: "Montserrat", serif;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2{
+        color: #2a2a2a;
+        font-size: 2.65rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    p{
+        display: block;
+        text-align: center;
+        padding: 0 100px;
+        color: var(--text-color);
+    }
+}
+/* --------------------------------------------------------------- */
+#quote-part-container{
+    width: 100%;
+    padding: 30px 0px 60px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#F4F0ED, #FFF) ;
+    font-family: "Montserrat", sans-serif;
+
+
+    #quote-container{
+        padding: 30px 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid #C78665;
+
+        #quote{
+            color: #2A2A2A;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        #quote-author{
+            color: #7A7A7A;
+            letter-spacing: 3px;
+        }
+    }
+    
+
+    svg{
+        display: block;
+        height: 24px;
+        fill: #C78665;
+        padding: 20px 0 20px 0;
+    }
+}
+/* --------------------------------------------------------------- */
+#guest-tutorial-container {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+
+    #quest-tutorial-cards-container {
+        padding: 0 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        column-gap: 60px;
+    }
+    
+    .quest-tutorial-card {
+        flex: 1 1 200px;
+        height: 400px;
+        max-width: 300px;
+        min-width: 150px;
+        padding: 50px 60px;
+        font-family: 'Inter', sans-serif;
+        box-shadow: 0px 20px 30px 0px #00000070;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 60px;
+    }
+    
+    h3 {
+        margin-bottom: 10px;
+        color: #2a2a2a;
+        font-size: 1.25rem;
+        line-height: 1.2em;
+        font-weight: 400;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    p {
+        color: #7a7a7a;
+        line-height: 1.4rem;
+    }
+    
+    .separator-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .separator {
+        margin-top: 20px;
+        height: 2px;
+        width: 125px;
+        background-color: #E3C3B2;
+    }
+}
+/* --------------------------------------------------------------- */
+#rsvp-container{
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    color: #fff;
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    #rsvp-background-container{
+        width: 100%;
+        height: 300px;
+        padding: 70px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("/assets/3.jpg") no-repeat center center/cover;
+    }
+
+    #rsvp-description-container{
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #rsvp-text-container{
+        width: 60%;
+    }
+    h2{
+        font-weight: 400;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+    p{
+        line-height: 2rem;
+    }
+    #rsvp-description-form{
+        width: 300px;
+        height: 450px;
+        padding: 50px;
+        background-color: #FFF;
+        border: 1px solid #C78665;
+    }
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+
+        label{
+            margin-bottom: 5px;
+            color: #777771;
+            font: inherit;
+            font-size: 0.75rem;
+            font-weight: 700;
+            
+        }
+        input[type='text'] {
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            font-weight: 400;
+            border: 2px solid transparent;
+            outline: none;
+            background-color: #EDEDED;
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        
+        input[type='text']:hover {
+            border-color: #7FC7E4;
+            box-shadow: 0 0 5px rgba(127, 199, 228, 0.7);
+        }
+        #quest-message {
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 150px;
+            max-height: 250px;
+            padding: 10px;
+            font-size: 1rem;
+            font-family: "Arial", sans-serif;
+            border: 2px solid #EDEDED;
+            background-color: #F9F9F9;
+            color: #333;
+            resize: vertical;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            outline: none;
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        #quest-message:focus {
+            border-color: #7FC7E4;
+            box-shadow: 0 4px 8px rgba(127, 199, 228, 0.3);
+            background-color: #FFFFFF;
+        }
+        #send-rsvp-container{
+            width: 100%;
+            text-align: center;
+        }
+        #send-rsvp{
+            margin-top: 20px;
+            padding: 0.6em 0.7em;
+            border: none;
+            border-radius: 3px;
+            box-sizing: border-box;
+            color: #fff;
+            background-color: #C78665;
+            font: inherit;
+
+            cursor: pointer;
+            transition: 0.2s all ease-in-out;
+        }
+        #send-rsvp:hover{
+            background-color: #8E5233;
+        }
+    }
+}
+
+#rsvp-background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(300px + 70px*2);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#rsvp-background-container * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ------------------------------ Animations --------------------------------- */
+/* ------------- BE-WITH-US -------------*/
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits:false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+/* ------------------------------ KEYFRAMES --------------------------------- */
+@media (max-width: 1200px) {
+    #rsvp-background-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    #rsvp-description-container{
+        width: 120%;
+        padding: 0;
+    }
+    #rsvp-description-form{
+
+    }
+
+
+    #rsvp-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(300px + 70px*2);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    
+    #rsvp-container * {
+        position: relative;
+        z-index: 2;
+    }
+}
+
