@@ -39,7 +39,7 @@ main{
     flex-direction: column;
     color: #fff;
     font-family: "Alice", sans-serif;
-    background: url("/assets/3.jpg") no-repeat center center/cover;
+    background: url("/3.webp") no-repeat center center/cover;
     overflow: hidden;
 
     #getting-married-container{
@@ -200,7 +200,7 @@ main{
             width: 400px;
             height: 400px;
             background-color:antiquewhite;
-            background: url(assets/5.jpg) no-repeat center center/cover;
+            background: url(/5.webp) no-repeat center center/cover;
             border-radius: 50%;
         }
     }
@@ -429,7 +429,7 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url("/assets/3.jpg") no-repeat center center/cover;
+        background: url("/3.webp") no-repeat center center/cover;
     }
 
     #rsvp-description-container{
