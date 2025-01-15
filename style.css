@@ -29,29 +29,39 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow:0 0 10px 1px black;
 }
 #main-photo{
     width: 100%;
-    height: 1000px;
+    min-height: 800px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: #fff;
-    font-family: "Alice", sans-serif;
-    background: url("3.webp") no-repeat center center/cover;
+    font-family: "Alice";
     overflow: hidden;
+    
+    .photo-container {
+        width: 100%;
+        height: 800px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0; /* Ustaw nakładkę za tekstem */
+        background: 
+            linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+            url(3.jpg) no-repeat center center/cover;
+    }
 
     #getting-married-container{
-        margin-top: 100px;
+        margin: 100px 0px 30px 0;
+        font-size: clamp(1rem, calc(0.5vw + 1rem), 2rem);
         letter-spacing: 2px;
-        font-size: 1rem;
-        margin-bottom: 30px;
         font-weight: 600;
     }
     #bride-groom-names-container{
-        font-size: 5rem;
+        font-size: clamp(1.3rem, calc(5vw + 1.3rem), 6rem);
         line-height: 1.3em;
         font-weight: 400;
        
@@ -65,12 +75,18 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 50px;
+        column-gap: min(5em, 8%);
+        row-gap: min(5em, 8%);
         font-size: 2rem;
-        padding: 50px;
+        padding-top: min(2em, 10%);
+        padding-bottom: min(3em, 20%);
     }
     p{
+        font-size: clamp(1rem, calc(0.5vw + 1rem), 2rem);
         box-sizing: border-box;
+    }
+    .card-element-value{
+        font-size: clamp(2rem, calc(0.5vw + 1rem), 2rem);
     }
     .countdown-card-container{
         
@@ -85,6 +101,7 @@ main{
         justify-content: center;
         align-items: center;
         gap: 20px;
+        margin-bottom: 30px;
     }
     .about-weeding-btn{
         padding: 0.7em 1.5em;
@@ -101,21 +118,11 @@ main{
     .about-weeding-btn:hover{
         box-shadow: 0px 0px 20px #fff;
     }
+    
 }
-#main-photo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1000px;
-    background: rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-#main-photo * {
+#main-photo > * {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 /* --------------------------------------------------------------- */
 #be-with-us-container{
