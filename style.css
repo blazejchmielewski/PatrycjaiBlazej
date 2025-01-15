@@ -41,7 +41,7 @@ main{
     color: #fff;
     font-family: "Alice";
     overflow: hidden;
-    
+    color:red;
     .photo-container {
         width: 100%;
         height: 800px;
