@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="send-email.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init({publicKey: "Qq-sOMbnO_UFkY934",});
+    })();
+    </script>
+    
 </head>
 <body>
     <main>
@@ -266,7 +276,7 @@
                 <label for="quest-message">Wiadomość</label>
                 <textarea id="quest-message" placeholder="Twoja wiadomość do Pary Młodej"></textarea> 
                 <div id="send-rsvp-container">
-                    <button id="send-rsvp" type="submit">Wyślij wiadomość</button>
+                    <button id="send-rsvp" type="submit" onclick="sendEmail()">Wyślij wiadomość</button>
                 </div>
             </form>
         </div>
@@ -304,6 +314,5 @@
         Copyright © 2025 Patrycja i Błażej | Polityka Prywatności
     </footer>
     <script src="script.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 </html>
