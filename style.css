@@ -43,19 +43,21 @@ main{
     color: #fff;
     font-family: "Alice";
     overflow: hidden;
-	
+
     .photo-container {
-        width: 100vw;
-        height: 100dvh;
         position: absolute;
         top: 0;
+        left: 0;
         right: 0;
-        z-index: 0; /* Ustaw nakładkę za tekstem */
-        background: 
-            linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-            url(3.webp) no-repeat center center/cover;
+        bottom: 0;
+        z-index: -1;
     }
-
+    .photo-container img {
+        min-height: 100dvh;
+        width: 100vw;
+        object-fit: cover;
+        z-index: -1;
+    }
     #getting-married-container{
         margin: 0px 0px 30px 0;
         font-size: clamp(1rem, calc(0.5vw + 1rem), 2rem);
@@ -115,6 +117,8 @@ main{
         align-items: center;
         gap: 20px;
         margin-bottom: 30px;
+        animation: start2 .7s forwards;
+        animation-delay: .6s;
     }
     .about-weeding-btn{
         padding: 0.7em 1.5em;
@@ -131,11 +135,16 @@ main{
     .about-weeding-btn:hover{
         box-shadow: 0px 0px 20px #fff;
     }
-    
-}
-#main-photo > * {
-    position: relative;
-    z-index: 1;
+    .photo-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.35); /* Przyciemnienie */
+        z-index: 0;
+    }
 }
 /* --------------------------------------------------------------- */
 #be-with-us-container{
@@ -217,11 +226,16 @@ main{
         justify-content: center;
         align-items: center;
 
+        #photo-container img{
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
         #photo-container{
             width: clamp(300px, 12vw, 400px);
             height: clamp(300px, 12vw, 400px);
-            background-color:antiquewhite;
-            background: url(5.webp) no-repeat center center/cover;
             border-radius: 50%;
         }
     }
@@ -441,7 +455,7 @@ main{
 #rsvp-container{
     margin-top: 30px;
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     position: relative;
     color: #fff;
     font-family: 'Montserrat';
@@ -453,14 +467,14 @@ main{
         width: 100%;
         height: 100%;
         background: url("3.webp") no-repeat center center/cover;
+        background-position: center 25%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     #rsvp-text-container{
         width: 100%;
-        padding-left: clamp(20px, calc(8vw + 15px) ,60px);
-        padding-right: clamp(20px, calc(8vw + 15px) ,60px);
+        padding: 0 clamp(8vw, calc(8vw + 15px) ,60px);
     }
     #rsvp-description-container{
         display: flex;
@@ -485,7 +499,7 @@ main{
     top: 0;
     left: 0;
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
@@ -498,11 +512,9 @@ main{
 #rsvp-description-form{
     width: 250px;
     height: 300px;
-    margin-top: 60px;
-    padding-top: 50px;
-    padding-left: calc(5vw + 5px);
-    padding-bottom: 50px;
-    padding-right: calc(3vw + 10px); 
+    margin-top: 40px;
+    padding: 50px clamp(10px, calc(7vw + 5px), 30px);
+
     background-color: #FFF;
     border: 1px solid #C78665;
 
@@ -603,34 +615,11 @@ main{
 
 .photo-card {
     width: 300px;
-    background-position: center;
-    background-size: cover;
-    aspect-ratio: 9 / 16;
 }
 
-#pc-1 {
-    background-image: url('g_1.webp');
-}
-#pc-2 {
-    background-image: url('g_2.webp');
-}
-#pc-3 {
-    background-image: url('g_3.webp');
-}
-#pc-4 {
-    background-image: url('g_4.webp');
-}
-#pc-5 {
-    background-image: url('g_5.webp');
-}
-#pc-6 {
-    background-image: url('g_6.webp');
-}
-#pc-7 {
-    background-image: url('g_7.webp');
-}
-#pc-8 {
-    background-image: url('g_8.webp');
+.photo-card img{
+    width: 100%;
+    height: 100%;
 }
 
 /* --------------------------------------------------------------- */

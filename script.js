@@ -34,21 +34,3 @@ function countdown() {
 }
 
 countdown() 
-
-window.addEventListener('load', () => {
-    const imagesToPreload = [
-        'g_1.webp',
-        'g_2.webp',
-        'g_3.webp',
-        'g_4.webp',
-        'g_5.webp',
-        'g_6.webp',
-        'g_7.webp',
-        'g_8.webp'
-    ];
-
-    imagesToPreload.forEach(src => {
-        const img = new Image();
-        img.src = src;
-    });
-});

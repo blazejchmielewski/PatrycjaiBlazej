@@ -5,19 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preload" href="1.webp" as="image">
-    <link rel="preload" href="2.webp" as="image">
-    <link rel="preload" href="3.webp" as="image">
-    <link rel="preload" href="g_1.webp" as="image">
-    <link rel="preload" href="g_2.webp" as="image">
-    <link rel="preload" href="g_3.webp" as="image">
-    <link rel="preload" href="g_4.webp" as="image">
-    <link rel="preload" href="g_5.webp" as="image">
-    <link rel="preload" href="g_6.webp" as="image">
-    <link rel="preload" href="g_7.webp" as="image">
-    <link rel="preload" href="g_8.webp" as="image">
-
     <script src="send-email.js"></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -32,7 +19,11 @@
 <body>
     <main>
         <div id="main-photo">
-            <div class="photo-container"></div>
+            <div class="photo-container">
+                <img src="3.webp"
+                    fetchpriority="height"
+                    alt="Main Image">
+            </div>
             <h1 id="getting-married-container">BIERZEMY ŚLUB!</h1>
             <h2 id="bride-groom-names-container">Patrycja & Błażej</h2>
             <div id="weeding-date-container">23 Sierpnia 2025</div>
@@ -83,7 +74,9 @@
                 </h3>
             </div>
             <div id="be-with-us-photo-container">
-                <div id="photo-container"></div>
+                <div id="photo-container">
+                    <img src="5.webp" loading="eager" decoding="async">
+                </div>
             </div>
         </div>
     
@@ -295,29 +288,14 @@
 
         <div id="photo-gallery-container">
             <div id="photo-container">
-                <div id="pc-1" class="photo-card"></div>
-            </div>
-
-            <div id="photo-container">
-                <div id="pc-2" class="photo-card"></div>
-            </div>
-            <div id="photo-container">
-                <div id="pc-3" class="photo-card"></div>
-            </div>
-            <div id="photo-container">
-                <div id="pc-4" class="photo-card"></div>
-            </div>
-            <div id="photo-container">
-                <div id="pc-4" class="photo-card"></div>
-            </div>
-            <div id="photo-container">
-                <div id="pc-6" class="photo-card"></div>
-            </div>
-            <div id="photo-container">
-                <div id="pc-7" class="photo-card"></div>
-            </div>
-            <div id="photo-container">
-                <div id="pc-8" class="photo-card"></div>
+                <div class="photo-card"><img src="g_1.webp" alt="sesja-1" decoding="async" loading="lazy"></div>
+                <div class="photo-card"><img src="g_2.webp" alt="sesja-2" decoding="async" loading="lazy"></div>
+                <div class="photo-card"><img src="g_3.webp" alt="sesja-3" decoding="async" loading="lazy"></div>
+                <div class="photo-card"><img src="g_4.webp" alt="sesja-4" decoding="async" loading="lazy"></div>
+                <div class="photo-card"><img src="g_5.webp" alt="sesja-5" decoding="async" loading="lazy"></div>
+                <div class="photo-card"><img src="g_6.webp" alt="sesja-6" decoding="async" loading="lazy"></div>
+                <div class="photo-card"><img src="g_7.webp" alt="sesja-7" decoding="async" loading="lazy"></div>
+                <div class="photo-card"><img src="g_8.webp" alt="sesja-8" decoding="async" loading="lazy"></div>
             </div>
         </div>
     </main>
