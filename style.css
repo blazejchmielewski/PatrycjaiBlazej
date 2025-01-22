@@ -61,6 +61,7 @@ main{
         font-size: clamp(1rem, calc(0.5vw + 1rem), 2rem);
         letter-spacing: 2px;
         font-weight: 600;
+        animation: start .7s;
     }
     #bride-groom-names-container{
         font-size: clamp(1.3rem, calc(5vw + 1.3rem), 6rem);
@@ -574,6 +575,11 @@ main{
     width: 100%;
     padding: 50px 100px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 
 #photo-container {
@@ -616,7 +622,6 @@ main{
     background-image: url('g_8.webp');
 }
 
-
 /* --------------------------------------------------------------- */
 footer{
     width: 100%;
@@ -629,6 +634,11 @@ footer{
 }
 
 /* ------------------------------ Animations --------------------------------- */
+/* ------------- START -------------*/
+
+
+
+
 /* ------------- BE-WITH-US -------------*/
 @property --angle{
     syntax: "<angle>";
@@ -667,4 +677,3 @@ footer{
         z-index: 2;
     }
 }
-
