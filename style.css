@@ -232,7 +232,7 @@ main{
     }
 
     #where-and-when-descritpion{
-        width: 85%;
+        width: 100%;
         padding: 40px;
         background-color: #FDFBFA;
 
@@ -570,29 +570,53 @@ main{
     }
 }
 /* --------------------------------------------------------------- */
-#photo-gallery-container{
+#photo-gallery-container {
     width: 100%;
     padding: 50px 100px;
     text-align: center;
-    
-
-    #photo-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 30px;
-
-    }
-    .photo-card{
-        width: 300px;
-
-    }
-    .photo-card img{
-        width: 100%;
-        height: 100%;
-    }
 }
+
+#photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.photo-card {
+    width: 300px;
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 9 / 16;
+}
+
+#pc-1 {
+    background-image: url('g_1.webp');
+}
+#pc-2 {
+    background-image: url('g_2.webp');
+}
+#pc-3 {
+    background-image: url('g_3.webp');
+}
+#pc-4 {
+    background-image: url('g_4.webp');
+}
+#pc-5 {
+    background-image: url('g_5.webp');
+}
+#pc-6 {
+    background-image: url('g_6.webp');
+}
+#pc-7 {
+    background-image: url('g_7.webp');
+}
+#pc-8 {
+    background-image: url('g_8.webp');
+}
+
+
 /* --------------------------------------------------------------- */
 footer{
     width: 100%;
