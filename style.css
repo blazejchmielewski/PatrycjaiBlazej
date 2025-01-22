@@ -61,18 +61,26 @@ main{
         font-size: clamp(1rem, calc(0.5vw + 1rem), 2rem);
         letter-spacing: 2px;
         font-weight: 600;
-        animation: start .7s;
+        opacity: 0;
+        animation: start2 .7s forwards;
+        animation-delay: .6s;
     }
     #bride-groom-names-container{
         font-size: clamp(1.3rem, calc(5vw + 1.3rem), 6rem);
         line-height: 1.3em;
         font-weight: 400;
+        opacity: 0;
+        animation: start1 .7s forwards;
+        animation-delay: .6s;
        
     }
     #weeding-date-container{
         margin-top: 16px;
         font-size: 1.5rem;
         line-height: 1.3em;
+        opacity: 0;
+        animation: start .7s forwards;
+        animation-delay: .6s;
     }
     #countdown-container{
         display: flex;
@@ -83,6 +91,9 @@ main{
         font-size: 2rem;
         padding-top: min(2em, 10%);
         padding-bottom: min(3em, 20%);
+        opacity: 0;
+        animation: start3 .7s forwards;
+        animation-delay: .6s;
     }
     p{
         font-size: clamp(1rem, calc(0.5vw + 1rem), 2rem);
@@ -92,7 +103,6 @@ main{
         font-size: clamp(2rem, calc(0.5vw + 1rem), 2rem);
     }
     .countdown-card-container{
-        
         height: 100px;
         display: flex;
         justify-content: space-between;
@@ -635,9 +645,48 @@ footer{
 
 /* ------------------------------ Animations --------------------------------- */
 /* ------------- START -------------*/
+@keyframes start {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes start3 {
+    from {
+        opacity: 0;
+        column-gap: min(12em, 20%);
+    }
+    to {
+        opacity: 1;
+        column-gap: min(8em, 12%);
+    }
+}
 
+@keyframes start2 {
+    from {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-
+@keyframes start1 {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* ------------- BE-WITH-US -------------*/
 @property --angle{
