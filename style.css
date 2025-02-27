@@ -12,8 +12,10 @@
 *{
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 html{
+    
     height: 100%;
     overflow-x: hidden;
 }
@@ -23,7 +25,10 @@ body{
     height: 100dvh;
     overflow-x: hidden;
 }
-
+a {
+    text-decoration: none;
+    color: inherit;
+}
 /* --------------------------------------------------------------- */
 main{
     display: flex;
