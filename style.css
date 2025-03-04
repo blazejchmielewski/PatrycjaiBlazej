@@ -183,8 +183,8 @@ main{
             height: 3rem;
         }
         h1{
-            font-size: clamp(1.3rem, calc(15vw+0.1rem),3rem);
-            font-family: "Alice" sans-serif;
+            font-size: clamp(1.3rem, calc(10vw + 0.1rem),3rem);
+            font-family: "Alice, Sans-serif";
             font-weight: 400;
             line-height: 1.3em;
         }
